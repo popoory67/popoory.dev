@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Popoory67</title>
- <link href="https://popoory67.github.io//atom.xml" rel="self"/>
- <link href="https://popoory67.github.io//"/>
+ <link href="https://popoory67.github.io//ko/atom.xml" rel="self"/>
+ <link href="https://popoory67.github.io//ko/"/>
  <updated>2024-03-18T15:18:01+00:00</updated>
  <id>https://popoory67.github.io/</id>
  <author>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>Programming Test2</title>
-   <link href="https://popoory67.github.io//programming/2024/03/15/Programming2/"/>
+   <link href="https://popoory67.github.io//ko/programming/2024/03/15/Programming2/"/>
    <updated>2024-03-15T00:00:00+00:00</updated>
    <id>https://popoory67.github.io//programming/2024/03/15/Programming2</id>
    <content type="html">&lt;p&gt;test&lt;/p&gt;
@@ -23,7 +23,7 @@
  
  <entry>
    <title>Programming Test</title>
-   <link href="https://popoory67.github.io//programming/graphics/2024/03/15/Programming/"/>
+   <link href="https://popoory67.github.io//ko/programming/graphics/2024/03/15/Programming/"/>
    <updated>2024-03-15T00:00:00+00:00</updated>
    <id>https://popoory67.github.io//programming/graphics/2024/03/15/Programming</id>
    <content type="html">&lt;p&gt;test&lt;/p&gt;
