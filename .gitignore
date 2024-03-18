@@ -4,10 +4,7 @@
 .jekyll-metadata
 _gh_pages
 _drafts
-_site/*
-
-# Exception files
-!_site/ko/
+_site/
 
 # Numerous always-ignore extensions
 *.diff
