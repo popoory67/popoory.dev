@@ -16,7 +16,9 @@ author:
 # Gems
 plugins:
   - jekyll-paginate
-
+  - jekyll-polyglot
+  - jekyll-redirect-from
+  
 exclude:
   - README.md
   - LICENSE.md
@@ -34,8 +36,14 @@ google_analytics_id: #UA-XXXX-Y
 # Collections
 collections:
   pages:
-    permalink: /:name/
     output: true
+    permalink: /:name/
+  en:
+    output: true
+    permalink: /:name/
+  ko:
+    output: true
+    permalink: /ko/:name/
     
 # Navigation (2nd level links supported)
 nav:
@@ -47,3 +55,8 @@ nav:
     - '/programming/'
     - { Graphics: '/graphics/' }
     - { Cpp: '/cpp/' }
+    
+# Language
+languages: ['en', 'ko']
+default_lang: 'en'
+exclude_from_localization: ['assets/', 'README.md']
