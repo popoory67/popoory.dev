@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+	<link href="http://gmpg.org/xfn/11" rel="profile">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<title>
+	
+	  1. What is "Jekyll" &middot; Popoory67
+	
+	</title>
+
+	
+	<link rel="canonical" href="http://localhost:4000/jekyll/2024-03-22-about-jekyll/">
+	
+
+	<link rel="stylesheet" href="http://localhost:4000/assets/css/poole.css">
+	<link rel="stylesheet" href="http://localhost:4000/assets/css/syntax.css">
+	<link rel="stylesheet" href="http://localhost:4000/assets/css/lanyon.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/assets/apple-touch-icon-precomposed.png">
+	<link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico">
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:4000/atom.xml">
+
+    <div class="language-switch-container">
+		<span class="language-switch" onclick="switchLanguage('en');">English</span>
+		<span class="language-switch" onclick="switchLanguage('ko');">한국어</span>
+    </div>
+	
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+		.language-switch-container {
+			position: fixed;
+			top: 3px;
+			right: 3px;
+			padding: 10px;
+			z-index: 1000;
+		}
+		.language-switch {
+			cursor: pointer;
+			font-size: 14px;
+			margin-right: 5px;
+		}
+		.language-switch:not(:last-child):after {
+			content: " | ";
+			margin-left: 5px;
+		}
+    </style>
+
+	<script>
+	  function switchLanguage(lang) 
+	  {
+		var supportedLangs = ['ko', 'ja', 'es']; 
+		var currentPath = window.location.pathname;
+		
+		// Creating a regular expression to remove the language code.
+		// (e.g: '/ko/', '/ja/', '/es/')
+		var langRegex = new RegExp('/(' + supportedLangs.join('|') + ')/');
+		// Extracting the base path (removing the language code)
+		var basePath = currentPath.replace(langRegex, '/');
+
+		// If the new language code isn't the default language ('en'),
+		// add it in the front of the base path.
+		if(lang !== 'en' && supportedLangs.includes(lang)) {
+		  basePath = '/' + lang + basePath;
+		}
+
+		// Navigating to the page.
+		window.location.pathname = basePath;
+	  }
+	</script>
+</head>
+
+
+
+  <body>
+
+    
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Postings written by <a href="https://www.linkedin.com/in/bozeury/" target="_blank">@popoory67</a>.</p>
+  </div>
+  
+  <nav class="sidebar-nav">
+    
+	
+    
+      
+      
+	  
+	  <!-- Main menu -->
+      <div class="sidebar-menu-item">
+        <a class="sidebar-nav-item " href="/">
+          Home
+        </a>
+		
+		<!-- Submenu checkbox -->
+        
+
+      </div>
+	  
+    
+      
+      
+	  
+	  <!-- Main menu -->
+      <div class="sidebar-menu-item">
+        <a class="sidebar-nav-item " href="/jekyll/">
+          Jekyll
+        </a>
+		
+		<!-- Submenu checkbox -->
+        
+
+      </div>
+	  
+    
+      
+      
+	  
+	  <!-- Main menu -->
+      <div class="sidebar-menu-item has-submenu">
+        <a class="sidebar-nav-item " href="/programming/">
+          Programming
+        </a>
+		
+		<!-- Submenu checkbox -->
+        
+		
+          <input type="checkbox" id="list-item-3" class="sidebar-submenu-checkbox" checked/>
+          <label for="list-item-3" class="folder"></label>
+		  
+		  <!-- Submenu -->
+          <ul class="sidebar-nav-item-sub">
+            
+              
+				<a class="sidebar-nav-item " href="/graphics/">
+					Graphics
+				</a>
+              
+            
+              
+				<a class="sidebar-nav-item " href="/cpp/">
+					Cpp
+				</a>
+              
+            
+          </ul>
+		  
+        
+
+      </div>
+	  
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2024 popoory67.</p>
+  </div>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Popoory67</a>
+            <small>A developer site</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">1. What is "Jekyll"</h1>
+  <span class="post-date">22 Mar 2024</span>
+  <p>Users starting with <strong>Jekyll</strong> likely aim to create their own blog or website.</p>
+
+<p>So, what exactly is “Jekyll”, and why is it used for website creation?</p>
+
+<h2 id="jekyll"><strong>Jekyll</strong></h2>
+<p><a href="https://jekyllrb.com">Jekyll</a> is a framework that generates files for <strong>Static websites</strong>. 
+It is developed in Ruby and automatically creates files according to the format I define.</p>
+
+<p>Let’s assume a situation to understand what <em>automatically generates</em> means.</p>
+
+<h3 id="1-example">1) Example</h3>
+<p>Consider there are web pages named A, B, and C.
+<img src="/assets/images/jekyll/image7.jpg" alt="Alt text" /></p>
+
+<p>A, B, and C look the same but differ in color.</p>
+
+<p>Explained in HTML terms, this is a situation that <em>the structure is the same, but data varies.</em></p>
+<blockquote>
+  <p>HTML is <strong>a text file</strong> describing where and how contents like images and texts are arranged.</p>
+</blockquote>
+
+<p>Represented in text, it looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span> A Contents <span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span> B Contents <span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span> C Contents <span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>Analyzing this, it is found:</p>
+<ol>
+  <li>“&lt;html&gt; &lt;/html&gt;” repeats.</li>
+  <li>“Contents” vary.</li>
+</ol>
+
+<p>Thus, it’s cumbersome to input “&lt;html&gt; &lt;/html&gt;” every time I write HTML.</p>
+
+<p>However, there is no need for that with “Jekyll”.</p>
+
+<h3 id="2-jekylls-role">2) Jekyll’s Role</h3>
+<p>Jekyll takes on the task of generating HTML.</p>
+
+<p>It manages files by separating the webpage’s structure, <strong>HTML</strong>, and the content, <strong>markdown</strong>.
+<img src="/assets/images/jekyll/image8.jpg" alt="Alt text" />
+Then, through a process called <strong>build</strong>, it produces web pages.</p>
+
+<p>It’s convenient that Jekyll generates HTML, but why is this process necessary?</p>
+
+<p>To explain simply, let’s briefly talk about dynamic websites.</p>
+
+<h2 id="dynamic-websites"><strong>Dynamic Websites</strong></h2>
+<h3 id="1-how-dynamic-websites-work">1) How Dynamic Websites Work</h3>
+<p>Well-known websites like Google and Amazon generate HTML on the server and present it to the viewers.</p>
+
+<p><img src="/assets/images/jekyll/image1.jpg" alt="Alt text" />
+This is called the dynamic website approach.</p>
+
+<h3 id="2-example">2) Example</h3>
+<p>For a typical scenario, consider:</p>
+
+<p>A user searches for the word “Apple”.
+<img src="/assets/images/jekyll/image2.jpg" alt="Alt text" /></p>
+
+<p>Then, the server finds websites containing information about Apple and displays the search results to the user.
+<img src="/assets/images/jekyll/image3.jpg" alt="Alt text" /></p>
+
+<p>In this process, the server:</p>
+
+<ol>
+  <li>Finds the Apple data.</li>
+  <li>Generates an HTML file containing the Apple data.</li>
+  <li>Displays the HTML on the user’s screen.</li>
+</ol>
+
+<p>This is how websites dynamically display content.</p>
+
+<h2 id="how-to-operate-a-website"><strong>How to Operate a Website</strong></h2>
+<p>Though we’ve explained generating HTML through a server, is a server absolutely necessary to operate a website?</p>
+
+<p>Not necessarily.</p>
+
+<p>The essence of a website is <em>viewing the HTML.</em>
+<img src="/assets/images/jekyll/image4.jpg" alt="Alt text" /></p>
+
+<p>Then, could we not upload the HTML file to a <em>repository</em> for others to download and view?
+<img src="/assets/images/jekyll/image5.jpg" alt="Alt text" /></p>
+
+<p>Yes, that’s possible.</p>
+
+<p>This method of uploading and operating HTML in a repository is known as a <strong>static website</strong>.</p>
+
+<h2 id="static-websites"><strong>Static Websites</strong></h2>
+<p>Static websites <strong>pre-generate all</strong> HTML making up the website and upload these files to a repository for others to view.
+<img src="/assets/images/jekyll/image6.jpg" alt="Alt text" /></p>
+
+<p>Therefore, unlike dynamic methods, there’s no need to generate HTML in real-time, which is a significant advantage in terms of speed.</p>
+
+<p>However, without a system to create the website like dynamic websites do, <strong>all HTML must be prepared in advance.</strong></p>
+
+<p>Thus, the volume of HTML to be stored is considerable, and there’s a lot of repetitive content. From the perspective of writing HTML, it’s highly inefficient to repeat the same tasks.</p>
+
+<ul>
+  <li>Advantages<br />
+    <ol>
+      <li>No need to generate HTML in real-time.<br /></li>
+      <li>Faster web page display speed.<br /></li>
+    </ol>
+  </li>
+  <li>Disadvantages<br />
+    <ol>
+      <li>All web pages’ HTML must be prepared in advance.<br /></li>
+      <li>A large amount of HTML must be stored.<br /></li>
+      <li>The same HTML content must be written repeatedly.<br /></li>
+    </ol>
+  </li>
+</ul>
+
+<p>If the HTML content is repetitive, creating a system to reuse the overlapping content seems like a solution.</p>
+
+<p>Fortunately, frameworks that automatically generate content already exist, notably the <strong>Jekyll</strong> we intend to use.</p>
+
+<blockquote>
+  <p>Jekyll takes on the task of generating HTML.</p>
+
+  <p>It manages files by separating the webpage’s structure, <strong>HTML</strong>, and the content, <strong>markdown</strong>.
+<img src="/assets/images/jekyll/image8.jpg" alt="Alt text" />
+Then, through a process called <strong>build</strong>, it produces web pages.</p>
+</blockquote>
+
+<p>Ultimately, we use Jekyll for a more straightforward and convenient composition of static websites.</p>
+
+<h2 id="in-conclusion"><em>In Conclusion…</em></h2>
+<p>I’ve heard about using Jekyll for personal blogs. 
+However, it wasn’t immediately clear to me what Jekyll is and why it’s used.</p>
+
+<p>So, I started writing this article to help understand it easily. 
+Since the goal is to comprehend the purpose of Jekyll, 
+I’ve omitted as much technical content as possible.</p>
+
+<div class="message">
+In reality, there are many components needed to build a webpage.
+Beyond HTML, there are scripts, CSS, assets, and more. <br />
+<br />
+Dynamic websites also involve more complex logic and structure, 
+but I've removed technical details to simplify the explanation. <br />
+<br />
+I hope this doesn't cause any confusion.
+</div>
+
+<p>For more detailed information about Jekyll, including how it works and its file structure, please refer to the link below.</p>
+<blockquote>
+  <p><a href="https://jekyllrb.com">Jekyll</a></p>
+</blockquote>
+
+</div>
+
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/assets/js/script.js'></script>
+  </body>
+</html>

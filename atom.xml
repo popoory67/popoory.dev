@@ -2,15 +2,176 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Popoory67</title>
- <link href="https://popoory67.github.io//atom.xml" rel="self"/>
- <link href="https://popoory67.github.io//"/>
- <updated>2024-03-21T19:37:44+00:00</updated>
- <id>https://popoory67.github.io/</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2024-03-22T05:34:50+09:00</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>popoory67</name>
    <email>bozeury@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>1. What is "Jekyll"</title>
+   <link href="http://localhost:4000/jekyll/2024-03-22-about-jekyll/"/>
+   <updated>2024-03-22T00:00:00+09:00</updated>
+   <id>http://localhost:4000/jekyll/Jekyll(1)</id>
+   <content type="html">&lt;p&gt;Users starting with &lt;strong&gt;Jekyll&lt;/strong&gt; likely aim to create their own blog or website.&lt;/p&gt;
+
+&lt;p&gt;So, what exactly is “Jekyll”, and why is it used for website creation?&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a framework that generates files for &lt;strong&gt;Static websites&lt;/strong&gt;. 
+It is developed in Ruby and automatically creates files according to the format I define.&lt;/p&gt;
+
+&lt;p&gt;Let’s assume a situation to understand what &lt;em&gt;automatically generates&lt;/em&gt; means.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-example&quot;&gt;1) Example&lt;/h3&gt;
+&lt;p&gt;Consider there are web pages named A, B, and C.
+&lt;img src=&quot;/assets/images/jekyll/image7.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A, B, and C look the same but differ in color.&lt;/p&gt;
+
+&lt;p&gt;Explained in HTML terms, this is a situation that &lt;em&gt;the structure is the same, but data varies.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;HTML is &lt;strong&gt;a text file&lt;/strong&gt; describing where and how contents like images and texts are arranged.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Represented in text, it looks like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt; A Contents &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt; B Contents &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt; C Contents &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Analyzing this, it is found:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;“&amp;lt;html&amp;gt; &amp;lt;/html&amp;gt;” repeats.&lt;/li&gt;
+  &lt;li&gt;“Contents” vary.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Thus, it’s cumbersome to input “&amp;lt;html&amp;gt; &amp;lt;/html&amp;gt;” every time I write HTML.&lt;/p&gt;
+
+&lt;p&gt;However, there is no need for that with “Jekyll”.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-jekylls-role&quot;&gt;2) Jekyll’s Role&lt;/h3&gt;
+&lt;p&gt;Jekyll takes on the task of generating HTML.&lt;/p&gt;
+
+&lt;p&gt;It manages files by separating the webpage’s structure, &lt;strong&gt;HTML&lt;/strong&gt;, and the content, &lt;strong&gt;markdown&lt;/strong&gt;.
+&lt;img src=&quot;/assets/images/jekyll/image8.jpg&quot; alt=&quot;Alt text&quot; /&gt;
+Then, through a process called &lt;strong&gt;build&lt;/strong&gt;, it produces web pages.&lt;/p&gt;
+
+&lt;p&gt;It’s convenient that Jekyll generates HTML, but why is this process necessary?&lt;/p&gt;
+
+&lt;p&gt;To explain simply, let’s briefly talk about dynamic websites.&lt;/p&gt;
+
+&lt;h2 id=&quot;dynamic-websites&quot;&gt;&lt;strong&gt;Dynamic Websites&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;1-how-dynamic-websites-work&quot;&gt;1) How Dynamic Websites Work&lt;/h3&gt;
+&lt;p&gt;Well-known websites like Google and Amazon generate HTML on the server and present it to the viewers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/jekyll/image1.jpg&quot; alt=&quot;Alt text&quot; /&gt;
+This is called the dynamic website approach.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-example&quot;&gt;2) Example&lt;/h3&gt;
+&lt;p&gt;For a typical scenario, consider:&lt;/p&gt;
+
+&lt;p&gt;A user searches for the word “Apple”.
+&lt;img src=&quot;/assets/images/jekyll/image2.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, the server finds websites containing information about Apple and displays the search results to the user.
+&lt;img src=&quot;/assets/images/jekyll/image3.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this process, the server:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Finds the Apple data.&lt;/li&gt;
+  &lt;li&gt;Generates an HTML file containing the Apple data.&lt;/li&gt;
+  &lt;li&gt;Displays the HTML on the user’s screen.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This is how websites dynamically display content.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-operate-a-website&quot;&gt;&lt;strong&gt;How to Operate a Website&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Though we’ve explained generating HTML through a server, is a server absolutely necessary to operate a website?&lt;/p&gt;
+
+&lt;p&gt;Not necessarily.&lt;/p&gt;
+
+&lt;p&gt;The essence of a website is &lt;em&gt;viewing the HTML.&lt;/em&gt;
+&lt;img src=&quot;/assets/images/jekyll/image4.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, could we not upload the HTML file to a &lt;em&gt;repository&lt;/em&gt; for others to download and view?
+&lt;img src=&quot;/assets/images/jekyll/image5.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Yes, that’s possible.&lt;/p&gt;
+
+&lt;p&gt;This method of uploading and operating HTML in a repository is known as a &lt;strong&gt;static website&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;static-websites&quot;&gt;&lt;strong&gt;Static Websites&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Static websites &lt;strong&gt;pre-generate all&lt;/strong&gt; HTML making up the website and upload these files to a repository for others to view.
+&lt;img src=&quot;/assets/images/jekyll/image6.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Therefore, unlike dynamic methods, there’s no need to generate HTML in real-time, which is a significant advantage in terms of speed.&lt;/p&gt;
+
+&lt;p&gt;However, without a system to create the website like dynamic websites do, &lt;strong&gt;all HTML must be prepared in advance.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Thus, the volume of HTML to be stored is considerable, and there’s a lot of repetitive content. From the perspective of writing HTML, it’s highly inefficient to repeat the same tasks.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Advantages&lt;br /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;No need to generate HTML in real-time.&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Faster web page display speed.&lt;br /&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Disadvantages&lt;br /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;All web pages’ HTML must be prepared in advance.&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;A large amount of HTML must be stored.&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;The same HTML content must be written repeatedly.&lt;br /&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If the HTML content is repetitive, creating a system to reuse the overlapping content seems like a solution.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, frameworks that automatically generate content already exist, notably the &lt;strong&gt;Jekyll&lt;/strong&gt; we intend to use.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Jekyll takes on the task of generating HTML.&lt;/p&gt;
+
+  &lt;p&gt;It manages files by separating the webpage’s structure, &lt;strong&gt;HTML&lt;/strong&gt;, and the content, &lt;strong&gt;markdown&lt;/strong&gt;.
+&lt;img src=&quot;/assets/images/jekyll/image8.jpg&quot; alt=&quot;Alt text&quot; /&gt;
+Then, through a process called &lt;strong&gt;build&lt;/strong&gt;, it produces web pages.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ultimately, we use Jekyll for a more straightforward and convenient composition of static websites.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-conclusion&quot;&gt;&lt;em&gt;In Conclusion…&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;I’ve heard about using Jekyll for personal blogs. 
+However, it wasn’t immediately clear to me what Jekyll is and why it’s used.&lt;/p&gt;
+
+&lt;p&gt;So, I started writing this article to help understand it easily. 
+Since the goal is to comprehend the purpose of Jekyll, 
+I’ve omitted as much technical content as possible.&lt;/p&gt;
+
+&lt;div class=&quot;message&quot;&gt;
+In reality, there are many components needed to build a webpage.
+Beyond HTML, there are scripts, CSS, assets, and more. &lt;br /&gt;
+&lt;br /&gt;
+Dynamic websites also involve more complex logic and structure, 
+but I&apos;ve removed technical details to simplify the explanation. &lt;br /&gt;
+&lt;br /&gt;
+I hope this doesn&apos;t cause any confusion.
+&lt;/div&gt;
+
+&lt;p&gt;For more detailed information about Jekyll, including how it works and its file structure, please refer to the link below.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
  
 
 </feed>

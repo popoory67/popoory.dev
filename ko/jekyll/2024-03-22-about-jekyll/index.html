@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+	<link href="http://gmpg.org/xfn/11" rel="profile">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<title>
+	
+	  1. Jekyll에 대해서 &middot; Popoory67
+	
+	</title>
+
+	
+	<link rel="canonical" href="http://localhost:4000/ko/jekyll/2024-03-22-about-jekyll/">
+	
+
+	<link rel="stylesheet" href="http://localhost:4000/assets/css/poole.css">
+	<link rel="stylesheet" href="http://localhost:4000/assets/css/syntax.css">
+	<link rel="stylesheet" href="http://localhost:4000/assets/css/lanyon.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/assets/apple-touch-icon-precomposed.png">
+	<link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico">
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:4000/ko/atom.xml">
+
+    <div class="language-switch-container">
+		<span class="language-switch" onclick="switchLanguage('en');">English</span>
+		<span class="language-switch" onclick="switchLanguage('ko');">한국어</span>
+    </div>
+	
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+		.language-switch-container {
+			position: fixed;
+			top: 3px;
+			right: 3px;
+			padding: 10px;
+			z-index: 1000;
+		}
+		.language-switch {
+			cursor: pointer;
+			font-size: 14px;
+			margin-right: 5px;
+		}
+		.language-switch:not(:last-child):after {
+			content: " | ";
+			margin-left: 5px;
+		}
+    </style>
+
+	<script>
+	  function switchLanguage(lang) 
+	  {
+		var supportedLangs = ['ko', 'ja', 'es']; 
+		var currentPath = window.location.pathname;
+		
+		// Creating a regular expression to remove the language code.
+		// (e.g: '/ko/', '/ja/', '/es/')
+		var langRegex = new RegExp('/(' + supportedLangs.join('|') + ')/');
+		// Extracting the base path (removing the language code)
+		var basePath = currentPath.replace(langRegex, '/');
+
+		// If the new language code isn't the default language ('en'),
+		// add it in the front of the base path.
+		if(lang !== 'en' && supportedLangs.includes(lang)) {
+		  basePath = '/' + lang + basePath;
+		}
+
+		// Navigating to the page.
+		window.location.pathname = basePath;
+	  }
+	</script>
+</head>
+
+
+
+  <body>
+
+    
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Postings written by <a href="https://www.linkedin.com/in/bozeury/" target="_blank">@popoory67</a>.</p>
+  </div>
+  
+  <nav class="sidebar-nav">
+    
+	
+    
+      
+      
+	  
+	  <!-- Main menu -->
+      <div class="sidebar-menu-item">
+        <a class="sidebar-nav-item " href="/ko/">
+          Home
+        </a>
+		
+		<!-- Submenu checkbox -->
+        
+
+      </div>
+	  
+    
+      
+      
+	  
+	  <!-- Main menu -->
+      <div class="sidebar-menu-item">
+        <a class="sidebar-nav-item " href="/ko/jekyll/">
+          Jekyll
+        </a>
+		
+		<!-- Submenu checkbox -->
+        
+
+      </div>
+	  
+    
+      
+      
+	  
+	  <!-- Main menu -->
+      <div class="sidebar-menu-item has-submenu">
+        <a class="sidebar-nav-item " href="/ko/programming/">
+          Programming
+        </a>
+		
+		<!-- Submenu checkbox -->
+        
+		
+          <input type="checkbox" id="list-item-3" class="sidebar-submenu-checkbox" checked/>
+          <label for="list-item-3" class="folder"></label>
+		  
+		  <!-- Submenu -->
+          <ul class="sidebar-nav-item-sub">
+            
+              
+				<a class="sidebar-nav-item " href="/ko/graphics/">
+					Graphics
+				</a>
+              
+            
+              
+				<a class="sidebar-nav-item " href="/ko/cpp/">
+					Cpp
+				</a>
+              
+            
+          </ul>
+		  
+        
+
+      </div>
+	  
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2024 popoory67.</p>
+  </div>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/ko/" title="Home">Popoory67</a>
+            <small>A developer site</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">1. Jekyll에 대해서</h1>
+  <span class="post-date">22 Mar 2024</span>
+  <p>Jekyll을 시작하는 사용자들은 블로그나 나만의 웹 사이트를 만들기 위해 사용할 것이라고 생각합니다.</p>
+
+<p>그렇다면 Jekyll이 무엇이길래 웹 사이트를 만드는 데에 사용하는 걸까요?</p>
+
+<h2 id="jekyll"><strong>Jekyll</strong></h2>
+<p><a href="https://jekyllrb.com">Jekyll</a>은 <strong>정적 웹 사이트</strong>를 구성하는 파일을 생성하는 프레임워크입니다.
+Ruby 언어로 개발되었으며, 내가 정의한 형식에 맞게 자동으로 생성해줍니다.</p>
+
+<p>여기서 <em>자동으로 생성해준다는 것</em>이 어떤 의미인지 상황을 가정하여 설명하겠습니다.</p>
+
+<h3 id="1-예시">1) 예시</h3>
+<p>예를 들면, 아래와 같이 A, B, C라는 웹 페이지가 있습니다.
+<img src="/assets/images/jekyll/image7.jpg" alt="Alt text" />
+A, B, C는 생김새는 같지만, 색상이 다릅니다.</p>
+
+<p>html 방식으로 설명하자면, html 구성은 같지만 데이터만 다른 경우입니다.</p>
+<blockquote>
+  <p>html은 이미지, 텍스트와 같은 컨텐츠가 어느 위치에 어떤 모양으로 배치가 되어있는지 적혀있는 <strong>텍스트 파일</strong>입니다.</p>
+</blockquote>
+
+<p>이를 텍스트로 표현하면 아래와 같습니다.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span> A Contents <span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span> B Contents <span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span> C Contents <span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>이 내용을 분석하면 이렇습니다.</p>
+<ol>
+  <li>“&lt;html&gt; &lt;/html&gt;“이 반복된다.</li>
+  <li>“Contents”는 다르다.</li>
+</ol>
+
+<p>즉, html을 작성할 때 마다 &lt;html&gt; &lt;/html&gt;을 매번 입력해줘야 하는 불편한 상황입니다.</p>
+
+<p>하지만 Jekyll을 사용한다면 그럴 필요가 없습니다.</p>
+
+<h3 id="2-jekyll의-역할">2) Jekyll의 역할</h3>
+<p>Jekyll은 html을 생성해주는 작업을 합니다.</p>
+
+<p>웹 페이지의 뼈대가 되는 html, 컨텐츠를 구성하는 markdown으로 분리하여 파일을 관리합니다.
+<img src="/assets/images/jekyll/image8.jpg" alt="Alt text" />
+그리고 빌드라는 과정으로 웹 페이지를 만들어냅니다.</p>
+
+<p>Jekyll이 html을 생성해주는 것은 편한 것은 알겠습니다.
+그런데 왜 이런 과정이 필요한 걸까요?</p>
+
+<p>쉽게 설명하기 위해서, 동적 웹 사이트에 대해 간략하게 설명하겠습니다.</p>
+
+<h2 id="동적-웹-사이트"><strong>동적 웹 사이트</strong></h2>
+<h3 id="1-동적-웹-사이트-방식">1) 동적 웹 사이트 방식</h3>
+<p>Google, Amazon 등 우리가 알고 있는 웹 사이트들은 <em>서버에서</em> html을 생성하여 사람들에게 보여줍니다.</p>
+
+<p><img src="/assets/images/jekyll/image1.jpg" alt="Alt text" />
+이를 동적 웹 사이트 방식이라고 합니다.</p>
+
+<h3 id="2-예시">2) 예시</h3>
+<p>이해를 돕기 위해 일반적인 상황을 가정해보겠습니다.</p>
+
+<p>예를 들면, 어떤 사용자가 Apple이라는 단어를 검색했습니다.
+<img src="/assets/images/jekyll/image2.jpg" alt="Alt text" /></p>
+
+<p>그러면 서버는 Apple이라는 정보를 가지고 있는 웹 사이트들을 찾습니다.
+그리고 사용자의 모니터에 Apple 검색 결과를 보여줍니다.
+<img src="/assets/images/jekyll/image3.jpg" alt="Alt text" /></p>
+
+<p>이 과정에서 서버는 아래와 같이 세 단계의 작업을 합니다.</p>
+<ol>
+  <li>Apple 데이터를 찾는다.</li>
+  <li>Apple 데이터를 삽입한 html 파일을 생성한다.</li>
+  <li>사용자의 화면에 html을 표시합니다.</li>
+</ol>
+
+<p>이것이 동적으로 웹 사이트를 표시하는 과정입니다.</p>
+
+<h2 id="웹-사이트를-운영하는-방법"><strong>웹 사이트를 운영하는 방법</strong></h2>
+<p>앞서 서버로 html을 생성하는 방식을 설명했지만, 웹 사이트를 운영하는 데에 <em>반드시</em> 서버가 필요할까요?</p>
+
+<p>그렇지는 않습니다.</p>
+
+<p>웹 사이트의 핵심은 <em>html을 열어보는 것</em>입니다.
+<img src="/assets/images/jekyll/image4.jpg" alt="Alt text" /></p>
+
+<p>그렇다면 html 파일을 <em>저장소</em>에 업로드하고, 다른 사람이 그것을 다운로드해서 봐도 되지 않을까요?
+<img src="/assets/images/jekyll/image5.jpg" alt="Alt text" /></p>
+
+<p>네, 가능합니다.</p>
+
+<p>이와 같이 html을 저장소에 업로드하여 운영하는 방식을 <strong>정적 웹 사이트</strong>라고 합니다.</p>
+
+<h2 id="정적-웹-사이트"><strong>정적 웹 사이트</strong></h2>
+<p>정적 웹 사이트는 웹 사이트를 구성하는 <strong>모든</strong> html를 미리 생성합니다. 그리고 저장소에 html들을 업로드하여 다른 사람에게 보여주는 방식입니다.
+<img src="/assets/images/jekyll/image6.jpg" alt="Alt text" /></p>
+
+<p>그래서 동적 방식에 비해 html을 생성하는 과정이 없고, 그만큼 빠르다는 장점이 있습니다.</p>
+
+<p>하지만 동적 웹 사이트처럼 웹 사이트를 만들어주는 시스템은 없습니다.
+그래서 <strong>모든 html을 사전에 만들어야 놓아야 합니다.</strong></p>
+
+<p>그래서 저장해야하는 html의 양이 많고, 중복되는 html 내용도 많습니다.
+html을 작성하는 입장에서는 동일한 작업을 매번 계속해야 하므로 작업이 매우 비효율적입니다.</p>
+
+<ul>
+  <li>
+    <p>장점<br />
+1) 실시간으로 html 생성하는 과정이 필요없다.<br />
+2) 웹 페이지 표시 속도가 빠르다.<br /></p>
+  </li>
+  <li>
+    <p>단점<br />
+1) 모든 웹 페이지의 html을 전부 만들어야 한다.<br />
+2) 저장해야 하는 html의 양이 많다.<br />
+3) 동일한 html의 내용을 매번 작성해야 한다.<br /></p>
+  </li>
+</ul>
+
+<p>html 내용이 중복이 된다면, 중복되는 내용을 재사용하도록 시스템을 만들면 해결될 것 같습니다.</p>
+
+<p>정말 다행스럽게도 이미 자동으로 만들어주는 프레임워크들이 존재하는데, 대표적으로 우리가 사용하려는 <strong>Jekyll</strong>이 있습니다.</p>
+
+<blockquote>
+  <p>Jekyll은 html을 생성해주는 작업을 합니다.</p>
+
+  <p>웹 페이지의 뼈대가 되는 html, 컨텐츠를 구성하는 markdown으로 분리하여 파일을 관리합니다.
+<img src="/assets/images/jekyll/image8.jpg" alt="Alt text" />
+그리고 빌드라는 과정으로 웹 페이지를 만들어냅니다.</p>
+</blockquote>
+
+<p>결과적으로, 우리는 정적 웹 사이트를 더 쉽고 편하게 구성하기 위해서 Jekyll을 사용하는 것입니다.</p>
+
+<h2 id="글을-마치며"><em>글을 마치며…</em></h2>
+<p>개인 블로그를 운영할 때 Jekyll을 사용한다는 이야기를 들었습니다.
+하지만 Jekyll이 무엇이고 왜 사용하는지는 바로 이해하기가 어려웠습니다.</p>
+
+<p>그래서 쉽게 이해를 돕기 위해서 이 글을 적기 시작했습니다.
+Jekyll의 목적을 이해하는 것이 목표이기 때문에 기술적인 내용은 최대한 배제했습니다.</p>
+
+<div class="message">
+사실, 웹 페이지를 구성하기 위해 필요한 것들이 정말 많습니다.<br />
+html 외에도 script, css, 애셋 등등 다양한 리소스들이 있습니다.<br />
+동적 웹 사이트도 로직과 구조가 훨씬 더 복잡하지만, 쉽게 설명하기 위해서 기술적인 내용은 제거했습니다.<br />
+<br />
+부디 혼동이 없으시길 바랍니다.
+</div>
+
+<p>Jekyll에 대해 자세한 내용, 작동 원리, 파일 구조와 같은 내용들은 아래 링크를 참고 부탁드립니다.</p>
+<blockquote>
+  <p><a href="https://jekyllrb-ko.github.io/">Jekyll 한국어</a></p>
+</blockquote>
+
+</div>
+
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/assets/js/script.js'></script>
+  </body>
+</html>
