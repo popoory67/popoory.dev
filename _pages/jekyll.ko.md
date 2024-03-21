@@ -1,7 +1,7 @@
 ---
 layout: list
-title: How to use Jekyll
+title: Jekyll 사용법
 category: jekyll
 permalink: /jekyll/
-lang: en
+lang: ko
 ---
