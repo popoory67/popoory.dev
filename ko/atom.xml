@@ -4,13 +4,218 @@
  <title>Popoory67</title>
  <link href="https://popoory67.github.io//ko/atom.xml" rel="self"/>
  <link href="https://popoory67.github.io//ko/"/>
- <updated>2024-03-22T12:19:47+00:00</updated>
+ <updated>2024-03-22T22:59:35+00:00</updated>
  <id>https://popoory67.github.io/</id>
  <author>
    <name>popoory67</name>
    <email>bozeury@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>2. Jekyll 시작하기</title>
+   <link href="https://popoory67.github.io//ko/jekyll/2024-03-23-jekyll-tutorial/"/>
+   <updated>2024-03-22T00:00:00+00:00</updated>
+   <id>https://popoory67.github.io//jekyll/Jekyll(2).ko</id>
+   <content type="html">&lt;hr /&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#jekyll-시작하기&quot;&gt;Jekyll 시작하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#jekyll-웹-사이트&quot;&gt;Jekyll 웹 사이트&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#1-github-repository-생성&quot;&gt;1) Github Repository 생성&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2-local-작업-환경-만들기&quot;&gt;2) Local 작업 환경 만들기&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#3-jekyll-파일-생성&quot;&gt;3) Jekyll 파일 생성&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#4-local-빌드&quot;&gt;4) Local 빌드&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#5-commit-and-push&quot;&gt;5) Commit and Push&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#6-deploy&quot;&gt;6) Deploy&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#7-웹-사이트-접속하기&quot;&gt;7) 웹 사이트 접속하기&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#local-서버-문제&quot;&gt;Local 서버 문제&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#division-문제&quot;&gt;Division 문제&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이전 포스팅에서 &lt;a href=&quot;../2024-03-22-about-jekyll/&quot;&gt;Jekyll이 무엇인지, 사용하는 목적과 목표가 무엇인지&lt;/a&gt; 알아봤습니다.&lt;/p&gt;
+
+&lt;p&gt;이번 포스팅에서는 Jekyll을 &lt;em&gt;어떻게 사용하는지&lt;/em&gt; 간략하게 알아보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-시작하기&quot;&gt;&lt;strong&gt;Jekyll 시작하기&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;이전 포스팅에서 Jekyll은 Ruby 기반 프레임워크라고 설명했습니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 &lt;a href=&quot;https://jekyllrb-ko.github.io/docs/&quot;&gt;Jekyll 설치&lt;/a&gt;는 크게 두 단계로 진행됩니다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ruby 기반 프레임워크이기 때문에 &lt;a href=&quot;https://www.ruby-lang.org/ko/downloads/&quot;&gt;Ruby 설치&lt;/a&gt;가 필요합니다.&lt;br /&gt;
+Ruby는 공식 사이트에서 &lt;em&gt;2.4.0 이상의 버전&lt;/em&gt;을 다운로드 받으면 됩니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ruby 설치 후, &lt;strong&gt;Jekyll&lt;/strong&gt;과 &lt;strong&gt;Bundler Gem&lt;/strong&gt;을 설치해줘야 합니다.&lt;br /&gt;&lt;/p&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;기본적으로 위 커맨드를 Windows CMD, Mac Terminal에 입력하여 설치하지만, 더 자세한 내용이 필요하다면 아래 링크를 참고하시는 것이 좋습니다.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://jekyllrb-ko.github.io/docs/installation/windows/&quot;&gt;Windows 설치 방법&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://jekyllrb-ko.github.io/docs/installation/macos/&quot;&gt;Mac 설치 방법&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;jekyll-웹-사이트&quot;&gt;&lt;strong&gt;Jekyll 웹 사이트&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Jekyll 설치가 완료되었다면, 이제 웹 사이트를 만들 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-github-repository-생성&quot;&gt;1) Github Repository 생성&lt;/h3&gt;
+&lt;p&gt;웹 사이트의 저장소 겸 경로가 될 Github Repository를 생성합니다.&lt;/p&gt;
+
+&lt;p&gt;웹 페이지를 저장소에 올려서 운영하는 &lt;em&gt;정적 웹 사이트&lt;/em&gt; 방식을 사용하기 위해서는 저장소가 필요합니다.
+Github에서는 Repository를 정적 웹 사이트로 운영할 수 있는 시스템이 있기 때문에 이것을 활용할 것입니다.&lt;/p&gt;
+
+&lt;p&gt;Github page를 만드는 내용은 아래 사이트를 참고바랍니다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://docs.github.com/ko/pages/quickstart&quot;&gt;Github page 시작하기&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2-local-작업-환경-만들기&quot;&gt;2) Local 작업 환경 만들기&lt;/h3&gt;
+&lt;p&gt;Repository를 만들었다면 Local에서 작업할 수 있는 환경을 만들어야 합니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Github에서 생성한 github.io의 Repository에서 경로를 복사합니다.
+&lt;img src=&quot;/assets/images/jekyll/image9.jpg&quot; alt=&quot;Alt text&quot; class=&quot;post-markdown-img80&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;형상관리 툴을 사용하여 Local에서 Clone합니다.
+소스 경로(URL)과 Clone할 디렉토리를 입력합니다.
+(아래 이미지는 SourceTree 기준)
+&lt;img src=&quot;/assets/images/jekyll/image10.jpg&quot; alt=&quot;Alt text&quot; class=&quot;post-markdown-img80&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이제 Local에서 작업할 수 있는 환경에 만들어졌습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-jekyll-파일-생성&quot;&gt;3) Jekyll 파일 생성&lt;/h3&gt;
+&lt;p&gt;지금은 Repository에는 웹 사이트라고 할만한 것이 없습니다.
+여기에 HTML, Script, CSS, Imagae 등 여러가지 리소스를 추가해서 웹 사이트를 만들어나갈 것입니다.&lt;/p&gt;
+
+&lt;p&gt;이 리소스들은 그대로 올려도 반영되지만, 우리는 왜 굳이 Jekyll을 사용하는지 이전 포스트에서 충분히 알았습니다.
+그래서 Jekyll을 사용할 수 있도록 Jekyll에서 제시하는 파일 구조를 만들 것입니다.&lt;/p&gt;
+
+&lt;p&gt;우선, Windows CMD나 Mac Terminal 작업을 기준으로 설명하겠습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;콘솔 창에서 Repository의 상위 폴더로 이동합니다.&lt;br /&gt;
+e.g) 폴더 경로가 C:\test라면 &lt;strong&gt;cd C:\&lt;/strong&gt; 입니다.
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd [Repository 상위 폴더]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;새로운 Jekyll 사이트를 생성합니다.&lt;br /&gt;
+e.g) Repository 이름이 test라면 &lt;strong&gt;jekyll new test&lt;/strong&gt; 입니다.
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new [Repository 이름]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/images/jekyll/image11.jpg&quot; alt=&quot;Alt text&quot; class=&quot;post-markdown-img100&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;그러면 아래와 같은 파일들이 생성됩니다.
+&lt;img src=&quot;/assets/images/jekyll/image12.jpg&quot; alt=&quot;Alt text&quot; class=&quot;post-markdown-img100&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;4-local-빌드&quot;&gt;4) Local 빌드&lt;/h3&gt;
+&lt;p&gt;Jekyll을 사용할 수 있는 환경이 만들어졌습니다.&lt;/p&gt;
+
+&lt;p&gt;파일의 역할이나 구조를 알아야 하지만, 지금은 html을 Jekyll로 생성해보는 것을 목표로 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;Local에서 빌드하고 정상적으로 동작하는지 테스트해보겠습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Repository로 이동
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd [Repository 경로]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Local Build
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Local Server Test
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;앞서 진행한 내용에 큰 문제가 없다면 아래 로그와 같을 것입니다.
+&lt;img src=&quot;/assets/images/jekyll/image13.jpg&quot; alt=&quot;Alt text&quot; class=&quot;post-markdown-img100&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;참고: &lt;a href=&quot;#local-서버-문제&quot;&gt;만약 문제가 있다면&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;이제 &lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt;으로 접속하여 웹 사이트가 정상 출력이 되는지 확인해봅니다.
+&lt;img src=&quot;/assets/images/jekyll/image15.jpg&quot; alt=&quot;Alt text&quot; class=&quot;post-markdown-img80&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위와 같은 화면이 나왔다면 성공입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-commit-and-push&quot;&gt;5) Commit and Push&lt;/h3&gt;
+&lt;p&gt;Local에서 문제없이 작동했으니, Repository에 반영합니다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit -a -m &quot;your message&quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;6-deploy&quot;&gt;6) Deploy&lt;/h3&gt;
+&lt;p&gt;Repository에 반영이 되었다면 Github Repository에서 Build and Deploy를 시작합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Build: 소스 코드를 실행 가능한 소프트웨어로 변환하는 과정
+Deploy: 빌드된 소프트웨어를 특정 환경에 설치하고 구성하는 과정&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Deploy까지 성공했다면 아래와 같을 것입니다.
+&lt;img src=&quot;/assets/images/jekyll/image16.jpg&quot; alt=&quot;Alt text&quot; class=&quot;post-markdown-img100&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;7-웹-사이트-접속하기&quot;&gt;7) 웹 사이트 접속하기&lt;/h3&gt;
+&lt;p&gt;별도로 URL 설정을 바꾸지 않았다면, Repository 이름과 URL이 동일할 것입니다.
+Deploy가 성공적으로 완료가 되었다면 URL로 접속해봅니다.&lt;/p&gt;
+
+&lt;p&gt;경로는 https로 시작해야 합니다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://[나의 Github ID].github.io/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;성공했다면 Local 서버에서 확인했던 화면과 동일할 것입니다.
+&lt;img src=&quot;/assets/images/jekyll/image15.jpg&quot; alt=&quot;Alt text&quot; class=&quot;post-markdown-img80&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;다른 사람도 접근할 수 있는 웹 사이트를 Jekyll로 만들었습니다.&lt;/p&gt;
+
+&lt;p&gt;지금은 기본 화면이지만, 리소스를 사용하기에 따라 좋은 웹 사이트를 만들 수 있습니다.
+자세한 내용은 아래 Theme 설명서를 읽고 참고하시길 바랍니다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://jekyllrb-ko.github.io/docs/themes/&quot;&gt;Jekyll Theme&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;local-서버-문제&quot;&gt;&lt;strong&gt;Local 서버 문제&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;division-문제&quot;&gt;Division 문제&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;현상&lt;/strong&gt;&lt;br /&gt;
+아래와 같은 메시지가 발생&lt;br /&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Deprecation Warning: Using / for division outside of calc() is deprecated and will be removed in Dart Sass 2.0.0.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/images/jekyll/image14.jpg&quot; alt=&quot;Alt text&quot; class=&quot;post-markdown-img100&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;해결 방법&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;나눗셈 연산자는 더이상 사용하지 않으니 math, calc 함수를 사용하라는 Warning 메시지입니다.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;문제가 발생한 파일로 이동하여 / 연산자를 제거하고 math, calc 함수로 대체하면 됩니다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;하지만 Warning이므로 반드시 해결하지 않아도 됩니다.&lt;/li&gt;
+      &lt;li&gt;만약에 기본 페이지 테스트 진행 중에 발생했다면, 이후에 다른 템플릿이나 화면을 구성하게 될테니 수정하지 않아도 괜찮습니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>1. Jekyll에 대해서</title>

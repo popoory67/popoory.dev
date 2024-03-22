@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+	<!-- Google adsense -->
+	<meta name="google-adsense-account" content="ca-pub-9277369674468174">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9277369674468174"
+     crossorigin="anonymous"></script>
+	<!-- End adsense -->
+	
+	<link href="http://gmpg.org/xfn/11" rel="profile">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<title>
+	
+	  2. Jekyll 시작하기 &middot; Popoory67
+	
+	</title>
+
+	
+	<link rel="canonical" href="https://popoory67.github.io//jekyll/2024-03-23-jekyll-tutorial/">
+	
+
+	<link rel="stylesheet" href="https://popoory67.github.io//assets/css/poole.css">
+	<link rel="stylesheet" href="https://popoory67.github.io//assets/css/syntax.css">
+	<link rel="stylesheet" href="https://popoory67.github.io//assets/css/lanyon.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://popoory67.github.io//assets/apple-touch-icon-precomposed.png">
+	<link rel="shortcut icon" href="https://popoory67.github.io//assets/favicon.ico">
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="https://popoory67.github.io//atom.xml">
+
+    <div class="language-switch-container">
+		<span class="language-switch" onclick="switchLanguage('en');">English</span>
+		<span class="language-switch" onclick="switchLanguage('ko');">한국어</span>
+    </div>
+	
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+		.language-switch-container {
+			position: fixed;
+			top: 3px;
+			right: 3px;
+			padding: 10px;
+			z-index: 1000;
+		}
+		.language-switch {
+			cursor: pointer;
+			font-size: 14px;
+			margin-right: 5px;
+		}
+		.language-switch:not(:last-child):after {
+			content: " | ";
+			margin-left: 5px;
+		}
+    </style>
+
+	<script>
+	  function switchLanguage(lang) 
+	  {
+		var supportedLangs = ['ko', 'ja', 'es']; 
+		var currentPath = window.location.pathname;
+		
+		// Creating a regular expression to remove the language code.
+		// (e.g: '/ko/', '/ja/', '/es/')
+		var langRegex = new RegExp('/(' + supportedLangs.join('|') + ')/');
+		// Extracting the base path (removing the language code)
+		var basePath = currentPath.replace(langRegex, '/');
+
+		// If the new language code isn't the default language ('en'),
+		// add it in the front of the base path.
+		if(lang !== 'en' && supportedLangs.includes(lang)) {
+		  basePath = '/' + lang + basePath;
+		}
+
+		// Navigating to the page.
+		window.location.pathname = basePath;
+	  }
+	</script>
+</head>
+
+
+
+  <body>
+
+    
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Postings written by <a href="https://www.linkedin.com/in/bozeury/" target="_blank">@popoory67</a>.</p>
+  </div>
+  
+  <nav class="sidebar-nav">
+    
+	
+    
+      
+      
+	  
+	  <!-- Main menu -->
+      <div class="sidebar-menu-item">
+        <a class="sidebar-nav-item " href="/">
+          Home
+        </a>
+		
+		<!-- Submenu checkbox -->
+        
+
+      </div>
+	  
+    
+      
+      
+	  
+	  <!-- Main menu -->
+      <div class="sidebar-menu-item">
+        <a class="sidebar-nav-item " href="/jekyll/">
+          Jekyll
+        </a>
+		
+		<!-- Submenu checkbox -->
+        
+
+      </div>
+	  
+    
+      
+      
+	  
+	  <!-- Main menu -->
+      <div class="sidebar-menu-item has-submenu">
+        <a class="sidebar-nav-item " href="/programming/">
+          Programming
+        </a>
+		
+		<!-- Submenu checkbox -->
+        
+		
+          <input type="checkbox" id="list-item-3" class="sidebar-submenu-checkbox" checked/>
+          <label for="list-item-3" class="folder"></label>
+		  
+		  <!-- Submenu -->
+          <ul class="sidebar-nav-item-sub">
+            
+              
+				<a class="sidebar-nav-item " href="/graphics/">
+					Graphics
+				</a>
+              
+            
+              
+				<a class="sidebar-nav-item " href="/cpp/">
+					Cpp
+				</a>
+              
+            
+          </ul>
+		  
+        
+
+      </div>
+	  
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2024 popoory67.</p>
+  </div>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Popoory67</a>
+            <small>A developer site</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+	<h1 class="post-title">2. Jekyll 시작하기</h1>
+	<span class="post-date">22 Mar 2024</span>
+  
+	<div class="post-content">
+	  <hr />
+<ul>
+  <li><a href="#jekyll-시작하기">Jekyll 시작하기</a></li>
+  <li><a href="#jekyll-웹-사이트">Jekyll 웹 사이트</a>
+    <ul>
+      <li><a href="#1-github-repository-생성">1) Github Repository 생성</a></li>
+      <li><a href="#2-local-작업-환경-만들기">2) Local 작업 환경 만들기</a></li>
+      <li><a href="#3-jekyll-파일-생성">3) Jekyll 파일 생성</a></li>
+      <li><a href="#4-local-빌드">4) Local 빌드</a></li>
+      <li><a href="#5-commit-and-push">5) Commit and Push</a></li>
+      <li><a href="#6-deploy">6) Deploy</a></li>
+      <li><a href="#7-웹-사이트-접속하기">7) 웹 사이트 접속하기</a></li>
+    </ul>
+  </li>
+  <li><a href="#local-서버-문제">Local 서버 문제</a>
+    <ul>
+      <li><a href="#division-문제">Division 문제</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<p>이전 포스팅에서 <a href="../2024-03-22-about-jekyll/">Jekyll이 무엇인지, 사용하는 목적과 목표가 무엇인지</a> 알아봤습니다.</p>
+
+<p>이번 포스팅에서는 Jekyll을 <em>어떻게 사용하는지</em> 간략하게 알아보겠습니다.</p>
+
+<h2 id="jekyll-시작하기"><strong>Jekyll 시작하기</strong></h2>
+<p>이전 포스팅에서 Jekyll은 Ruby 기반 프레임워크라고 설명했습니다.</p>
+
+<p>그래서 <a href="https://jekyllrb-ko.github.io/docs/">Jekyll 설치</a>는 크게 두 단계로 진행됩니다.</p>
+<ol>
+  <li>
+    <p>Ruby 기반 프레임워크이기 때문에 <a href="https://www.ruby-lang.org/ko/downloads/">Ruby 설치</a>가 필요합니다.<br />
+Ruby는 공식 사이트에서 <em>2.4.0 이상의 버전</em>을 다운로드 받으면 됩니다.</p>
+  </li>
+  <li>
+    <p>Ruby 설치 후, <strong>Jekyll</strong>과 <strong>Bundler Gem</strong>을 설치해줘야 합니다.<br /></p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll bundler
+</code></pre></div>    </div>
+    <p>기본적으로 위 커맨드를 Windows CMD, Mac Terminal에 입력하여 설치하지만, 더 자세한 내용이 필요하다면 아래 링크를 참고하시는 것이 좋습니다.</p>
+    <ul>
+      <li><a href="https://jekyllrb-ko.github.io/docs/installation/windows/">Windows 설치 방법</a></li>
+      <li><a href="https://jekyllrb-ko.github.io/docs/installation/macos/">Mac 설치 방법</a></li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="jekyll-웹-사이트"><strong>Jekyll 웹 사이트</strong></h2>
+<p>Jekyll 설치가 완료되었다면, 이제 웹 사이트를 만들 수 있습니다.</p>
+
+<h3 id="1-github-repository-생성">1) Github Repository 생성</h3>
+<p>웹 사이트의 저장소 겸 경로가 될 Github Repository를 생성합니다.</p>
+
+<p>웹 페이지를 저장소에 올려서 운영하는 <em>정적 웹 사이트</em> 방식을 사용하기 위해서는 저장소가 필요합니다.
+Github에서는 Repository를 정적 웹 사이트로 운영할 수 있는 시스템이 있기 때문에 이것을 활용할 것입니다.</p>
+
+<p>Github page를 만드는 내용은 아래 사이트를 참고바랍니다.</p>
+<blockquote>
+  <p><a href="https://docs.github.com/ko/pages/quickstart">Github page 시작하기</a></p>
+</blockquote>
+
+<h3 id="2-local-작업-환경-만들기">2) Local 작업 환경 만들기</h3>
+<p>Repository를 만들었다면 Local에서 작업할 수 있는 환경을 만들어야 합니다.</p>
+
+<ol>
+  <li>
+    <p>Github에서 생성한 github.io의 Repository에서 경로를 복사합니다.
+<img src="/assets/images/jekyll/image9.jpg" alt="Alt text" class="post-markdown-img80" /></p>
+  </li>
+  <li>
+    <p>형상관리 툴을 사용하여 Local에서 Clone합니다.
+소스 경로(URL)과 Clone할 디렉토리를 입력합니다.
+(아래 이미지는 SourceTree 기준)
+<img src="/assets/images/jekyll/image10.jpg" alt="Alt text" class="post-markdown-img80" /></p>
+  </li>
+</ol>
+
+<p>이제 Local에서 작업할 수 있는 환경에 만들어졌습니다.</p>
+
+<h3 id="3-jekyll-파일-생성">3) Jekyll 파일 생성</h3>
+<p>지금은 Repository에는 웹 사이트라고 할만한 것이 없습니다.
+여기에 HTML, Script, CSS, Imagae 등 여러가지 리소스를 추가해서 웹 사이트를 만들어나갈 것입니다.</p>
+
+<p>이 리소스들은 그대로 올려도 반영되지만, 우리는 왜 굳이 Jekyll을 사용하는지 이전 포스트에서 충분히 알았습니다.
+그래서 Jekyll을 사용할 수 있도록 Jekyll에서 제시하는 파일 구조를 만들 것입니다.</p>
+
+<p>우선, Windows CMD나 Mac Terminal 작업을 기준으로 설명하겠습니다.</p>
+
+<ol>
+  <li>콘솔 창에서 Repository의 상위 폴더로 이동합니다.<br />
+e.g) 폴더 경로가 C:\test라면 <strong>cd C:\</strong> 입니다.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd [Repository 상위 폴더]
+</code></pre></div>    </div>
+  </li>
+  <li>새로운 Jekyll 사이트를 생성합니다.<br />
+e.g) Repository 이름이 test라면 <strong>jekyll new test</strong> 입니다.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new [Repository 이름]
+</code></pre></div>    </div>
+    <p><img src="/assets/images/jekyll/image11.jpg" alt="Alt text" class="post-markdown-img100" /></p>
+  </li>
+</ol>
+
+<p>그러면 아래와 같은 파일들이 생성됩니다.
+<img src="/assets/images/jekyll/image12.jpg" alt="Alt text" class="post-markdown-img100" /></p>
+
+<h3 id="4-local-빌드">4) Local 빌드</h3>
+<p>Jekyll을 사용할 수 있는 환경이 만들어졌습니다.</p>
+
+<p>파일의 역할이나 구조를 알아야 하지만, 지금은 html을 Jekyll로 생성해보는 것을 목표로 하겠습니다.</p>
+
+<p>Local에서 빌드하고 정상적으로 동작하는지 테스트해보겠습니다.</p>
+
+<ol>
+  <li>Repository로 이동
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd [Repository 경로]
+</code></pre></div>    </div>
+  </li>
+  <li>Local Build
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle build
+</code></pre></div>    </div>
+  </li>
+  <li>Local Server Test
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>앞서 진행한 내용에 큰 문제가 없다면 아래 로그와 같을 것입니다.
+<img src="/assets/images/jekyll/image13.jpg" alt="Alt text" class="post-markdown-img100" /></p>
+<blockquote>
+  <p>참고: <a href="#local-서버-문제">만약 문제가 있다면</a></p>
+</blockquote>
+
+<p>이제 <a href="http://localhost:4000">http://localhost:4000</a>으로 접속하여 웹 사이트가 정상 출력이 되는지 확인해봅니다.
+<img src="/assets/images/jekyll/image15.jpg" alt="Alt text" class="post-markdown-img80" /></p>
+
+<p>위와 같은 화면이 나왔다면 성공입니다.</p>
+
+<h3 id="5-commit-and-push">5) Commit and Push</h3>
+<p>Local에서 문제없이 작동했으니, Repository에 반영합니다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -a -m "your message"
+git push
+</code></pre></div></div>
+
+<h3 id="6-deploy">6) Deploy</h3>
+<p>Repository에 반영이 되었다면 Github Repository에서 Build and Deploy를 시작합니다.</p>
+<blockquote>
+  <p>Build: 소스 코드를 실행 가능한 소프트웨어로 변환하는 과정
+Deploy: 빌드된 소프트웨어를 특정 환경에 설치하고 구성하는 과정</p>
+</blockquote>
+
+<p>Deploy까지 성공했다면 아래와 같을 것입니다.
+<img src="/assets/images/jekyll/image16.jpg" alt="Alt text" class="post-markdown-img100" /></p>
+
+<h3 id="7-웹-사이트-접속하기">7) 웹 사이트 접속하기</h3>
+<p>별도로 URL 설정을 바꾸지 않았다면, Repository 이름과 URL이 동일할 것입니다.
+Deploy가 성공적으로 완료가 되었다면 URL로 접속해봅니다.</p>
+
+<p>경로는 https로 시작해야 합니다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://[나의 Github ID].github.io/
+</code></pre></div></div>
+
+<p>성공했다면 Local 서버에서 확인했던 화면과 동일할 것입니다.
+<img src="/assets/images/jekyll/image15.jpg" alt="Alt text" class="post-markdown-img80" /></p>
+
+<p>다른 사람도 접근할 수 있는 웹 사이트를 Jekyll로 만들었습니다.</p>
+
+<p>지금은 기본 화면이지만, 리소스를 사용하기에 따라 좋은 웹 사이트를 만들 수 있습니다.
+자세한 내용은 아래 Theme 설명서를 읽고 참고하시길 바랍니다.</p>
+<blockquote>
+  <p><a href="https://jekyllrb-ko.github.io/docs/themes/">Jekyll Theme</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="local-서버-문제"><strong>Local 서버 문제</strong></h2>
+
+<h3 id="division-문제">Division 문제</h3>
+<ul>
+  <li><strong>현상</strong><br />
+아래와 같은 메시지가 발생<br />
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Deprecation Warning: Using / for division outside of calc() is deprecated and will be removed in Dart Sass 2.0.0.
+</code></pre></div>    </div>
+    <p><img src="/assets/images/jekyll/image14.jpg" alt="Alt text" class="post-markdown-img100" /></p>
+  </li>
+  <li><strong>해결 방법</strong>
+    <ul>
+      <li>나눗셈 연산자는 더이상 사용하지 않으니 math, calc 함수를 사용하라는 Warning 메시지입니다.</li>
+      <li>
+        <p>문제가 발생한 파일로 이동하여 / 연산자를 제거하고 math, calc 함수로 대체하면 됩니다.</p>
+      </li>
+      <li>하지만 Warning이므로 반드시 해결하지 않아도 됩니다.</li>
+      <li>만약에 기본 페이지 테스트 진행 중에 발생했다면, 이후에 다른 템플릿이나 화면을 구성하게 될테니 수정하지 않아도 괜찮습니다.</li>
+    </ul>
+  </li>
+</ul>
+
+	</div>
+</div>
+
+
+<div class="related">
+	<h2>Related posts</h2>
+	<ul class="related-posts">
+		
+			<li>
+				<h3>
+					<a href="/jekyll/2024-03-22-about-jekyll/">
+						1. What is "Jekyll"
+						<small>22 Mar 2024</small>
+					</a>
+				</h3>
+			</li>
+		
+	</ul>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/assets/js/script.js'></script>
+  </body>
+</html>
