@@ -1,9 +1,7 @@
 ---
 layout: list
-title: Programming Korean
+title: Programming
 category: programming
 permalink: /programming/
 lang: ko
 ---
-
-Programming

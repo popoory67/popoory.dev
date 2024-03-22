@@ -1,9 +1,7 @@
 ---
 layout: list
-title: Programming English
+title: Programming
 category: programming
 permalink: /programming/
 lang: en
 ---
-
-Programming
