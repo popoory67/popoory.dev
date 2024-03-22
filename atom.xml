@@ -4,7 +4,7 @@
  <title>Popoory67</title>
  <link href="https://popoory67.github.io//atom.xml" rel="self"/>
  <link href="https://popoory67.github.io//"/>
- <updated>2024-03-22T11:09:42+00:00</updated>
+ <updated>2024-03-22T12:19:47+00:00</updated>
  <id>https://popoory67.github.io/</id>
  <author>
    <name>popoory67</name>
@@ -17,7 +17,28 @@
    <link href="https://popoory67.github.io//jekyll/2024-03-22-about-jekyll/"/>
    <updated>2024-03-22T00:00:00+00:00</updated>
    <id>https://popoory67.github.io//jekyll/Jekyll(1)</id>
-   <content type="html">&lt;p&gt;Users starting with &lt;strong&gt;Jekyll&lt;/strong&gt; likely aim to create their own blog or website.&lt;/p&gt;
+   <content type="html">&lt;hr /&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#jekyll&quot;&gt;Jekyll&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#1-example&quot;&gt;1) Example&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2-jekylls-role&quot;&gt;2) Jekyll’s Role&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#dynamic-websites&quot;&gt;Dynamic Websites&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#1-how-dynamic-websites-work&quot;&gt;1) How Dynamic Websites Work&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2-example&quot;&gt;2) Example&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-to-operate-a-website&quot;&gt;How to Operate a Website&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#static-websites&quot;&gt;&lt;strong&gt;Static Websites&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#in-conclusion&quot;&gt;In Conclusion…&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Users starting with &lt;strong&gt;Jekyll&lt;/strong&gt; likely aim to create their own blog or website.&lt;/p&gt;
 
 &lt;p&gt;So, what exactly is “Jekyll”, and why is it used for website creation?&lt;/p&gt;
 
