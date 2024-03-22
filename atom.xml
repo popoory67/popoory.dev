@@ -4,7 +4,7 @@
  <title>Popoory67</title>
  <link href="https://popoory67.github.io//atom.xml" rel="self"/>
  <link href="https://popoory67.github.io//"/>
- <updated>2024-03-21T20:17:24+00:00</updated>
+ <updated>2024-03-22T10:32:21+00:00</updated>
  <id>https://popoory67.github.io/</id>
  <author>
    <name>popoory67</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>1. What is "Jekyll"</title>
-   <link href="http://localhost:4000/jekyll/2024-03-22-about-jekyll/"/>
-   <updated>2024-03-22T00:00:00+09:00</updated>
-   <id>http://localhost:4000/jekyll/Jekyll(1)</id>
+   <link href="https://popoory67.github.io//jekyll/2024-03-22-about-jekyll/"/>
+   <updated>2024-03-22T00:00:00+00:00</updated>
+   <id>https://popoory67.github.io//jekyll/Jekyll(1)</id>
    <content type="html">&lt;p&gt;Users starting with &lt;strong&gt;Jekyll&lt;/strong&gt; likely aim to create their own blog or website.&lt;/p&gt;
 
 &lt;p&gt;So, what exactly is “Jekyll”, and why is it used for website creation?&lt;/p&gt;
