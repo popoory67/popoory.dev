@@ -4,7 +4,7 @@
  <title>Popoory67</title>
  <link href="https://popoory67.github.io//ko/atom.xml" rel="self"/>
  <link href="https://popoory67.github.io//ko/"/>
- <updated>2024-03-22T10:47:00+00:00</updated>
+ <updated>2024-03-22T11:09:42+00:00</updated>
  <id>https://popoory67.github.io/</id>
  <author>
    <name>popoory67</name>
@@ -34,7 +34,7 @@ A, B, C는 생김새는 같지만, 색상이 다릅니다.&lt;/p&gt;
 
 &lt;p&gt;html 방식으로 설명하자면, html 구성은 같지만 데이터만 다른 경우입니다.&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;html은 이미지, 텍스트와 같은 컨텐츠가 어느 위치에 어떤 모양으로 배치가 되어있는지 적혀있는 &lt;strong&gt;텍스트 파일&lt;/strong&gt;입니다.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;html&lt;/strong&gt;은 이미지, 텍스트와 같은 컨텐츠가 어느 위치에 어떤 모양으로 배치가 되어있는지 적혀있는 &lt;strong&gt;텍스트 파일&lt;/strong&gt;입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;이를 텍스트로 표현하면 아래와 같습니다.&lt;/p&gt;
@@ -62,10 +62,10 @@ A, B, C는 생김새는 같지만, 색상이 다릅니다.&lt;/p&gt;
 &lt;img src=&quot;/assets/images/jekyll/image8.jpg&quot; alt=&quot;Alt text&quot; /&gt;
 그리고 빌드라는 과정으로 웹 페이지를 만들어냅니다.&lt;/p&gt;
 
-&lt;p&gt;Jekyll이 html을 생성해주는 것은 편한 것은 알겠습니다.
-그런데 왜 이런 과정이 필요한 걸까요?&lt;/p&gt;
+&lt;p&gt;Jekyll은 html을 생성해주는 도구라는 것을 알았습니다.
+하지만 그럼에도 Jekyll이 어느 정도로 편리한 것인지, 왜 굳이 사용하려는지 감이 잘 잡히지 않습니다.&lt;/p&gt;
 
-&lt;p&gt;쉽게 설명하기 위해서, 동적 웹 사이트에 대해 간략하게 설명하겠습니다.&lt;/p&gt;
+&lt;p&gt;쉽게 설명하기 위해서, 동적 웹 사이트를 설명하고 비교해보겠습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;동적-웹-사이트&quot;&gt;&lt;strong&gt;동적 웹 사이트&lt;/strong&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;1-동적-웹-사이트-방식&quot;&gt;1) 동적 웹 사이트 방식&lt;/h3&gt;
@@ -139,11 +139,13 @@ html을 작성하는 입장에서는 동일한 작업을 매번 계속해야 하
 &lt;p&gt;정말 다행스럽게도 이미 자동으로 만들어주는 프레임워크들이 존재하는데, 대표적으로 우리가 사용하려는 &lt;strong&gt;Jekyll&lt;/strong&gt;이 있습니다.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Jekyll은 html을 생성해주는 작업을 합니다.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;em&gt;복습…&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-  &lt;p&gt;웹 페이지의 뼈대가 되는 html, 컨텐츠를 구성하는 markdown으로 분리하여 파일을 관리합니다.
+  &lt;p&gt;Jekyll은 &lt;strong&gt;html을 생성해주는 작업&lt;/strong&gt;을 합니다.&lt;/p&gt;
+
+  &lt;p&gt;웹 페이지의 뼈대가 되는 &lt;strong&gt;html&lt;/strong&gt;, 컨텐츠를 구성하는 &lt;strong&gt;markdown&lt;/strong&gt;으로 분리하여 파일을 관리합니다.
 &lt;img src=&quot;/assets/images/jekyll/image8.jpg&quot; alt=&quot;Alt text&quot; /&gt;
-그리고 빌드라는 과정으로 웹 페이지를 만들어냅니다.&lt;/p&gt;
+그리고 &lt;strong&gt;빌드&lt;/strong&gt;라는 과정으로 웹 페이지를 만들어냅니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;결과적으로, 우리는 정적 웹 사이트를 더 쉽고 편하게 구성하기 위해서 Jekyll을 사용하는 것입니다.&lt;/p&gt;

@@ -4,7 +4,7 @@
  <title>Popoory67</title>
  <link href="https://popoory67.github.io//atom.xml" rel="self"/>
  <link href="https://popoory67.github.io//"/>
- <updated>2024-03-22T10:47:00+00:00</updated>
+ <updated>2024-03-22T11:09:42+00:00</updated>
  <id>https://popoory67.github.io/</id>
  <author>
    <name>popoory67</name>
@@ -35,7 +35,7 @@ It is developed in Ruby and automatically creates files according to the format 
 
 &lt;p&gt;Explained in HTML terms, this is a situation that &lt;em&gt;the structure is the same, but data varies.&lt;/em&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;HTML is &lt;strong&gt;a text file&lt;/strong&gt; describing where and how contents like images and texts are arranged.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;HTML&lt;/strong&gt; is &lt;strong&gt;a text file&lt;/strong&gt; describing where and how contents like images and texts are arranged.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Represented in text, it looks like this:&lt;/p&gt;
@@ -65,7 +65,7 @@ Then, through a process called &lt;strong&gt;build&lt;/strong&gt;, it produces w
 
 &lt;p&gt;It’s convenient that Jekyll generates HTML, but why is this process necessary?&lt;/p&gt;
 
-&lt;p&gt;To explain simply, let’s briefly talk about dynamic websites.&lt;/p&gt;
+&lt;p&gt;To explain simply, let’s briefly talk about and compare to dynamic websites.&lt;/p&gt;
 
 &lt;h2 id=&quot;dynamic-websites&quot;&gt;&lt;strong&gt;Dynamic Websites&lt;/strong&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;1-how-dynamic-websites-work&quot;&gt;1) How Dynamic Websites Work&lt;/h3&gt;
@@ -139,7 +139,9 @@ This is called the dynamic website approach.&lt;/p&gt;
 &lt;p&gt;Fortunately, frameworks that automatically generate content already exist, notably the &lt;strong&gt;Jekyll&lt;/strong&gt; we intend to use.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Jekyll takes on the task of generating HTML.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;em&gt;Let’s remind…&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;Jekyll takes on the task of &lt;strong&gt;generating HTML&lt;/strong&gt;.&lt;/p&gt;
 
   &lt;p&gt;It manages files by separating the webpage’s structure, &lt;strong&gt;HTML&lt;/strong&gt;, and the content, &lt;strong&gt;markdown&lt;/strong&gt;.
 &lt;img src=&quot;/assets/images/jekyll/image8.jpg&quot; alt=&quot;Alt text&quot; /&gt;
