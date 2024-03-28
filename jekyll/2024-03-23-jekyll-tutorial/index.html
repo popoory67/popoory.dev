@@ -159,7 +159,199 @@
 	<span class="post-date">22 Mar 2024</span>
   
 	<div class="post-content">
-	  
+	  <hr />
+<ul>
+  <li><a href="#getting-started-with-jekyll">Getting Started with Jekyll</a></li>
+  <li><a href="#jekyll-website">Jekyll Website</a>
+    <ul>
+      <li><a href="#1-creating-a-github-repository">1) Creating a Github Repository</a></li>
+      <li><a href="#2-creating-a-local-working-environment">2) Creating a Local Working Environment</a></li>
+      <li><a href="#3-generating-jekyll-files">3) Generating Jekyll Files</a></li>
+      <li><a href="#4-local-build">4) Local Build</a></li>
+      <li><a href="#5-commit-and-push">5) Commit and Push</a></li>
+      <li><a href="#6-deploy">6) Deploy</a></li>
+      <li><a href="#7-accessing-the-website">7) Accessing the Website</a></li>
+    </ul>
+  </li>
+  <li><a href="#local-server-issues">Local Server Issues</a>
+    <ul>
+      <li><a href="#division-issue">Division Issue</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<p>In the previous posting, we explored <a href="../2024-03-22-about-jekyll/">What Jekyll is, its purpose, and its goals</a>.</p>
+
+<p>In this posting, we’ll briefly look into <em>how to use</em> Jekyll.</p>
+
+<h2 id="getting-started-with-jekyll"><strong>Getting Started with Jekyll</strong></h2>
+<p>As mentioned in the previous post, Jekyll is a Ruby-based framework.</p>
+
+<p>Therefore, <a href="https://jekyllrb.com/docs/">installing Jekyll</a> involves two major steps:</p>
+<ol>
+  <li>
+    <p>Since it’s a Ruby-based framework, <a href="https://www.ruby-lang.org/en/downloads/">installing Ruby</a> is necessary. You can download a version <em>above 2.4.0</em> from the official site.</p>
+  </li>
+  <li>
+    <p>After installing Ruby, you need to install <strong>Jekyll</strong> and <strong>Bundler Gem</strong>.</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll bundler
+</code></pre></div>    </div>
+    <p>Typically, you input the above command in Windows CMD or Mac Terminal to install, but for more detailed information, it’s advisable to refer to the links below:</p>
+    <ul>
+      <li><a href="https://jekyllrb.com/docs/installation/windows/">Installation for Windows</a></li>
+      <li><a href="https://jekyllrb.com/docs/installation/macos/">Installation for MacOS</a></li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="jekyll-website"><strong>Jekyll Website</strong></h2>
+<p>Once Jekyll installation is complete, you’re now ready to create your website.</p>
+
+<h3 id="1-creating-a-github-repository">1) Creating a Github Repository</h3>
+<p>Create a Github Repository that will serve as the storage and path for your website.</p>
+
+<p>To operate a <em>static website</em> by uploading web pages to the repository, you need a repository. Github has a system that allows you to run a repository as a static website, so we’ll utilize this.</p>
+
+<p>For making a Github page, refer to the site below:</p>
+<blockquote>
+  <p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages">Getting started with Github Pages</a></p>
+</blockquote>
+
+<h3 id="2-creating-a-local-working-environment">2) Creating a Local Working Environment</h3>
+<p>After creating the repository, you need to create a working environment locally.</p>
+
+<ol>
+  <li>
+    <p>Copy the path from the github.io repository you created on Github.
+<img src="/assets/images/jekyll/image9.jpg" alt="Alt text" class="post-markdown-img80" /></p>
+  </li>
+  <li>
+    <p>Use a version control tool to clone it locally.
+Enter the source path (URL) and the directory to clone.
+(The image below is based on SourceTree)
+<img src="/assets/images/jekyll/image10.jpg" alt="Alt text" class="post-markdown-img80" /></p>
+  </li>
+</ol>
+
+<p>You have now created an environment to work locally.</p>
+
+<h3 id="3-generating-jekyll-files">3) Generating Jekyll Files</h3>
+<p>Currently, the repository doesn’t contain anything that can be called a website.
+You will add various resources such as HTML, Script, CSS, Images, etc., to create a website.</p>
+
+<p>These resources will be reflected even if uploaded directly, but we have sufficiently understood why we specifically use Jekyll in the previous post.
+Therefore, we will create a file structure suggested by Jekyll.</p>
+
+<p>For now, let’s explain based on working in Windows CMD or Mac Terminal.</p>
+
+<ol>
+  <li>Move to the parent folder of the Repository in the console window.<br />
+e.g., If the folder path is C:\test, then it’s <strong>cd C:\</strong>.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd [Parent folder of the Repository]
+</code></pre></div>    </div>
+  </li>
+  <li>Create a new Jekyll site.<br />
+e.g., If the Repository name is test, then <strong>jekyll new test</strong>.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new [Repository name]
+</code></pre></div>    </div>
+    <p><img src="/assets/images/jekyll/image11.jpg" alt="Alt text" class="post-markdown-img100" /></p>
+  </li>
+</ol>
+
+<p>The following files will be created.
+<img src="/assets/images/jekyll/image12.jpg" alt="Alt text" class="post-markdown-img100" /></p>
+
+<h3 id="4-local-build">4) Local Build</h3>
+<p>An environment to use Jekyll has been created.</p>
+
+<p>Although it’s important to understand the role and structure of files, our goal for now is to generate html with Jekyll.</p>
+
+<p>Let’s build locally and test if it works correctly.</p>
+
+<ol>
+  <li>Move to the Repository
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd [Repository path]
+</code></pre></div>    </div>
+  </li>
+  <li>Local Build
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle build
+</code></pre></div>    </div>
+  </li>
+  <li>Local Server Test
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>If there weren’t any major issues with the steps you’ve taken, the log should look like below.
+<img src="/assets/images/jekyll/image13.jpg" alt="Alt text" title="Post-markdown-img100" /></p>
+<blockquote>
+  <p>Note: <a href="#local-server-issues">If there are any problems</a></p>
+</blockquote>
+
+<p>Now, visit <a href="http://localhost:4000">http://localhost:4000</a> to check if the website displays correctly.
+<img src="/assets/images/jekyll/image15.jpg" alt="Alt text" title="Post-markdown-img80" /></p>
+
+<p>If you see a screen like the one above, you have succeeded.</p>
+
+<h3 id="5-commit-and-push">5) Commit and Push</h3>
+<p>Since it worked without any issues locally, let’s reflect those changes in the Repository.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -a -m "your message"
+git push
+</code></pre></div></div>
+
+<h3 id="6-deploy">6) Deploy</h3>
+<p>Once the changes have been reflected in the Repository, GitHub will start the Build and Deploy process.</p>
+<ul>
+  <li><strong>Build</strong>: The process of converting source code into executable software.</li>
+  <li><strong>Deploy</strong>: The process of installing and setting up the built software in a specific environment.</li>
+</ul>
+
+<p>If the deploy was successful, it should look something like this.
+<img src="/assets/images/jekyll/image16.jpg" alt="Alt text" title="Post-markdown-img100" /></p>
+
+<h3 id="7-accessing-the-website">7) Accessing the Website</h3>
+<p>Unless you’ve specifically changed the URL settings, the Repository name and URL should be the same. Once the deploy has successfully completed, try accessing the site through the URL.</p>
+
+<p>The path should start with https.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://[My Github ID].github.io/
+</code></pre></div></div>
+
+<p>If successful, the screen should look the same as what you saw on your local server.
+<img src="/assets/images/jekyll/image15.jpg" alt="Alt text" title="Post-markdown-img80" /></p>
+
+<p>You’ve created a website with Jekyll that others can access.</p>
+
+<p>While it’s currently showing the default screen, depending on how you utilize resources, you can create a great website. For more information, it is recommended to read and refer to the Jekyll Theme documentation.</p>
+<blockquote>
+  <p><a href="https://jekyllrb.com/docs/themes/">Jekyll Theme</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="local-server-issues"><strong>Local Server Issues</strong></h2>
+
+<h3 id="division-issue">Division Issue</h3>
+<ul>
+  <li><strong>Symptom</strong><br />
+You encounter the following message<br />
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Deprecation Warning: Using / for division outside of calc() is deprecated and will be removed in Dart Sass 2.0.0.
+</code></pre></div>    </div>
+    <p><img src="/assets/images/jekyll/image14.jpg" alt="Alt text" title="Post-markdown-img100" /></p>
+  </li>
+  <li><strong>Solution</strong>
+    <ul>
+      <li>The division operator is no longer in use, so the warning message advises using the math or calc functions instead.</li>
+      <li>
+        <p>Navigate to the file where the issue occurred and replace the / operator with math or calc functions.</p>
+      </li>
+      <li>However, since it’s just a warning, it’s not mandatory to resolve it.</li>
+      <li>If this occurred while testing basic pages, you might not need to make any changes, especially if you plan to switch to a different template or screen layout later.</li>
+    </ul>
+  </li>
+</ul>
 
 	</div>
 </div>
