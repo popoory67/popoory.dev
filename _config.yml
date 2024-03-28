@@ -49,10 +49,12 @@ nav:
     - '/'
   Jekyll:
     - '/jekyll/'
-  Programming:
-    - '/programming/'
-    - { Graphics: '/graphics/' }
-    - { Cpp: '/cpp/' }
+
+## To avoid rejected Google Adsense, the following settings are temporarily commented out.
+#  Programming:
+#    - '/programming/'
+#    - { Graphics: '/graphics/' }
+#    - { Cpp: '/cpp/' }
     
 # Language
 languages: ['en', 'ko']
